@@ -231,7 +231,7 @@ img {
   border-radius: 4px;
   opacity: 1;  
    transform: scale(1) translate(-50%, -50%);  
-    transition: transform 250ms var(--timing-function),    opasity 250ms var(--timing-function);
+    transition: transform 250ms var(--timing-function), opasity 250ms var(--timing-function);
 }
 .close-button{  
    position: absolute;  
@@ -246,7 +246,13 @@ img {
   background-color:rgba(255, 255, 255, 1);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-
+.icon-close{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
+  color: #000000;
+}
 .about-benefits {
   width: 400px;
 }
