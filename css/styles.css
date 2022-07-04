@@ -428,7 +428,7 @@ img {
   position: relative;
   overflow: hidden;
 }
-.img-port-thumb::before{
+.img-port-overlay{
   content: '';
   position: absolute;
   top: 0;
@@ -436,7 +436,7 @@ img {
   width: 100%;
   height: 100%;
   background-color:  rgba(33, 150, 243, 0.9);
-  transform: translateX(100%);
+  transform: translateY(100%);
   transition: transform 250ms var(--timing-function);
 }
 .img-port-text-thumb{
@@ -457,8 +457,8 @@ img {
   color: var(--primery-white-color);
  
 }
-.port-cards-link:hover .img-port-thumb::before{
-  transform: translateX(0);
+.port-cards-link:hover .img-port-overlay{
+  transform: translateY(0);
 }
 .port-cards-link:hover .img-port-text-thumb{
   opacity: 1;
