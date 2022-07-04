@@ -319,9 +319,9 @@ fill: #000000;
 }
 .img-text-title-thumb{
   position: absolute;
-  top: 50%;
+  top: 85%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-85%, -50%);
   opacity: 0;
   transition: 250ms opacity var(--timing-function);
 }
