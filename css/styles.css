@@ -589,7 +589,7 @@ fill: #000000;
 .footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
-.adress {
+.adress{
   font-style: normal;
 }
 .btm-port .active {
