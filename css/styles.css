@@ -320,6 +320,8 @@ img {
   transform: translate(-85%, -50%);
   opacity: 0;
   transition: 250ms opacity var(--timing-function);
+  padding-top: 27px;
+  padding-bottom: 27px;
 }
 
 .img-title-item:hover .img-thumb::before {
