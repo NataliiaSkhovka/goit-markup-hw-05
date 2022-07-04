@@ -216,7 +216,7 @@ img {
   pointer-events: none;
   visibility: hidden;
 }
-.backdrop.is-hidden .modal{
+.backdrop.is-hidden.modal{
   transform: scale(1.1) translate(-50%, -50%);
   opacity: 0;
 }
@@ -240,7 +240,9 @@ img {
   padding: 0;   
   border: 0;  
    cursor: pointer;
+   color: #000000;
   background-color:rgba(255, 255, 255, 1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .about-benefits {
   width: 400px;
