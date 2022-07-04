@@ -234,24 +234,24 @@ img {
     transition: transform 250ms var(--timing-function), opasity 250ms var(--timing-function);
 }
 .close-button{  
-   position: absolute;  
-    top:8px;   
+  position: absolute;
+    top: 8px;
     right: 8px;
-  padding: 0;   
-  border: 0;  
-   cursor: pointer;
-   box-sizing: border-box;
-   border-radius: 50%;
-   color: #000000;
-  background-color:rgba(255, 255, 255, 1);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 1);
+    transition: fill 250ms var(--timing-function);
 }
 .icon-close{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50% -50%);
-  color: #000000;
+fill: #000000;
 }
 .about-benefits {
   width: 400px;
@@ -312,7 +312,10 @@ img {
   text-align: center;
   text-transform: uppercase;
   color: var(--primery-white-color);
-  margin-bottom: 27px;
+ bottom: 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 .img-text-title-thumb{
   position: absolute;
