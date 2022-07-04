@@ -121,12 +121,13 @@ img {
   background: var(--accent-color);
   left: 0;
   bottom: 0;
+  animation-fill-mode: forwards;
  transform: scaleX(0) ;
   transition: opacity 250ms var(--timing-function);
 }
 .header-link:hover::after{
   transform: scaleX(1) ;
-
+  
 }
 .header-contact {
   margin-left: auto;
@@ -199,6 +200,29 @@ img {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:  rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+.main-btn-modal{
+  position: absolute;
+  background-color: var(--primery-white-color);
+  min-width:528px ;
+  min-height: 581px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
 }
 .about-benefits {
   width: 400px;
@@ -429,8 +453,8 @@ img {
   overflow: hidden;
 }
 .img-port-overlay{
-  content: '';
   position: absolute;
+  display: inline-block;
   top: 0;
   left: 0;
   width: 100%;
@@ -439,28 +463,26 @@ img {
   transform: translateY(100%);
   transition: transform 250ms var(--timing-function);
 }
-.img-port-text-thumb{
- position: absolute;
- display: flex;
- align-items: center;
- justify-content: center;
+
+.img-port-text{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56; 
+  color: var(--primery-white-color);
+  position: absolute;
+ 
+ max-width: 370px;
+ max-height: 294px;
   top: 100%;
   left: 100%;
   opacity: 0;
   transform: translate(-100%, -100%);
   transition: 250ms opacity var(--timing-function);
 }
-.img-port-text{
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.56; 
-  color: var(--primery-white-color);
- 
-}
 .port-cards-link:hover .img-port-overlay{
   transform: translateY(0);
 }
-.port-cards-link:hover .img-port-text-thumb{
+.port-cards-link:hover .img-port-text{
   opacity: 1;
   cursor: pointer;
 }
