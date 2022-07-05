@@ -6,7 +6,7 @@
   --accent-color: #2196f3;
   --main-text-color: #757575;
   --secondary-text-color: #212121;
-  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   font-family: var(--main-font);
@@ -35,6 +35,9 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+.no-scroll{
+overflow: hidden;
 }
 .section {
   padding-top: 94px;
@@ -107,6 +110,7 @@ img {
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: var(--timing-function);
 }
 .header-link {
   position: relative;
@@ -123,7 +127,7 @@ img {
   bottom: 0;
   animation-fill-mode: forwards;
   transform: scaleX(1);
-  transition: opacity 250ms var(--timing-function);
+  transition: opacity var(--timing-function);
 }
 .header-contact {
   margin-left: auto;
@@ -189,6 +193,7 @@ img {
   letter-spacing: 0.06em;
   border: none;
   border-radius: 4px;
+  transition: var(--timing-function);
 }
 .main-btn:hover,
 .main-btn:focus {
@@ -205,7 +210,9 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opasity 250ms var(--timing-function);
+  visibility: visible;
+  transition: opasity var(--timing-function), visibility var(--timing-function);
+  z-index: 1000;
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -228,7 +235,7 @@ img {
   border-radius: 4px;
   opacity: 1;
   transform: scale(1) translate(-50%, -50%);
-  transition: transform 250ms var(--timing-function), opasity 250ms var(--timing-function);
+  transition: transform var(--timing-function), opasity var(--timing-function);
 }
 .close-button {
   position: absolute;
@@ -241,7 +248,7 @@ img {
   padding: 0;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 1);
-  transition: fill 250ms var(--timing-function);
+  transition: fill var(--timing-function);
 }
 .icon-close {
   position: absolute;
@@ -312,26 +319,16 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.img-text-title-thumb {
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  transform: translate(-85%, -50%);
-  opacity: 0;
-  transition: 250ms opacity var(--timing-function);
-   padding-top: 27px;
-  padding-bottom: 27px;
+  padding-top: 27px;
 }
 
-.img-title-item:hover .img-thumb::before {
+.img-title-item:hover .img-text-title-overlay {
   transform: translateY(0);
 }
-.img-title-item:hover .img-text-title-thumb {
+.img-title-item:hover .img-text-title {
   opacity: 1;
 }
-.img-thumb::before {
-  content: '';
+.img-text-title-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -339,7 +336,7 @@ img {
   height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
   transform: translateY(100%);
-  transition: transform 250ms var(--timing-function);
+  transition: transform var(--timing-function);
 }
 .img-section-title {
   display: flex;
@@ -396,6 +393,7 @@ img {
   height: 44px;
   border-radius: 50%;
   color: #afb1b8;
+  transition: var(--timing-function);
 }
 .social-icon {
   fill: currentColor;
@@ -427,6 +425,7 @@ img {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
+  transition: var(--timing-function);
 }
 .clients-icon {
   fill: currentColor;
@@ -455,6 +454,7 @@ img {
   background-color: #f5f4fa;
   border: none;
   cursor: pointer;
+  transition: var(--timing-function);
 }
 .btn-port:hover,
 .btn-port:focus {
@@ -488,7 +488,7 @@ img {
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  transition: transform 250ms var(--timing-function);
+  transition: transform var(--timing-function);
 }
 
 .img-port-text {
@@ -503,7 +503,7 @@ img {
   width: 322px;
   top: 50%;
   left: 50%;
-  opacity: 0;
+  
   transform: translate(-50%, -50%);
   transition: 250ms opacity var(--timing-function);
 }
@@ -579,6 +579,7 @@ img {
 .foot-cont {
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
+  transition: var(--timing-function);
 }
 .foot-cont:hover,
 .foot-cont:focus {
@@ -587,7 +588,7 @@ img {
 .footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
-.adress {
+.address {
   font-style: normal;
 }
 .btm-port .active {
@@ -621,6 +622,7 @@ img {
   border-radius: 50%;
   color: var(--primery-white-color);
   background-color: rgba(255, 255, 255, 0.1);
+  transition: var(--timing-function);
 }
 .footer-social-link:not(:last-child) {
   margin-right: 10px;
