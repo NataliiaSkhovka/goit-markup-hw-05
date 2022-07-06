@@ -36,9 +36,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-.no-scroll{
-overflow: hidden;
-}
+
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -65,7 +63,7 @@ overflow: hidden;
   overflow: hidden;
 }
 .header {
-  border-bottom: 1px solid #eeeeee;
+  outline: 1px solid #eeeeee;
   background-color: #ffffff;
 }
 .header .container {
@@ -110,7 +108,7 @@ overflow: hidden;
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
-  transition: var(--timing-function);
+  transition: color var(--timing-function);
 }
 .header-link {
   position: relative;
@@ -122,12 +120,12 @@ overflow: hidden;
   width: 100%;
   height: 4px;
   border: 2px;
-  background: var(--accent-color);
+  background-color: var(--accent-color);
   left: 0;
   bottom: 0;
   animation-fill-mode: forwards;
   transform: scaleX(1);
-  transition: opacity var(--timing-function);
+  transition: transform var(--timing-function);
 }
 .header-contact {
   margin-left: auto;
@@ -193,7 +191,7 @@ overflow: hidden;
   letter-spacing: 0.06em;
   border: none;
   border-radius: 4px;
-  transition: var(--timing-function);
+  transition: color var(--timing-function), backgroud-color var(--timing-function);
 }
 .main-btn:hover,
 .main-btn:focus {
@@ -322,12 +320,7 @@ overflow: hidden;
   padding-top: 27px;
 }
 
-.img-title-item:hover .img-text-title-overlay {
-  transform: translateY(0);
-}
-.img-title-item:hover .img-text-title {
-  opacity: 1;
-}
+
 .img-text-title-overlay {
   position: absolute;
   bottom: 0;
@@ -335,8 +328,6 @@ overflow: hidden;
   width: 100%;
   height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
-  transform: translateY(100%);
-  transition: transform var(--timing-function);
 }
 .img-section-title {
   display: flex;
@@ -393,7 +384,7 @@ overflow: hidden;
   height: 44px;
   border-radius: 50%;
   color: #afb1b8;
-  transition: var(--timing-function);
+  transition: color var(--timing-function), background-color var(--timing-function);
 }
 .social-icon {
   fill: currentColor;
@@ -425,7 +416,7 @@ overflow: hidden;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
-  transition: var(--timing-function);
+  transition: color var(--timing-function), border var(--timing-function);
 }
 .clients-icon {
   fill: currentColor;
@@ -433,7 +424,7 @@ overflow: hidden;
 .clients-icon-link:hover,
 .clients-icon-link:focus {
   color: var(--accent-color);
-  border-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 /*.clients-icon-item:hover .clients-icon,
 .clients-icon-item:focus .clients-icon {
@@ -454,7 +445,8 @@ overflow: hidden;
   background-color: #f5f4fa;
   border: none;
   cursor: pointer;
-  transition: var(--timing-function);
+  transition: color var(--timing-function), background-color var(--timing-function),
+    box-shadow var(--timing-function);
 }
 .btn-port:hover,
 .btn-port:focus {
@@ -503,9 +495,9 @@ overflow: hidden;
   width: 322px;
   top: 50%;
   left: 50%;
-  
+
   transform: translate(-50%, -50%);
-  transition: 250ms opacity var(--timing-function);
+  transition: opacity var(--timing-function);
 }
 .port-cards-link:hover .img-port-overlay {
   transform: translateY(0);
@@ -579,7 +571,7 @@ overflow: hidden;
 .foot-cont {
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
-  transition: var(--timing-function);
+  transition: color var(--timing-function);
 }
 .foot-cont:hover,
 .foot-cont:focus {
@@ -622,7 +614,7 @@ overflow: hidden;
   border-radius: 50%;
   color: var(--primery-white-color);
   background-color: rgba(255, 255, 255, 0.1);
-  transition: var(--timing-function);
+  transition: color var(--timing-function), background-color var(--timing-function);
 }
 .footer-social-link:not(:last-child) {
   margin-right: 10px;
